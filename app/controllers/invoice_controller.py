@@ -5,5 +5,8 @@ class InvoiceController:
 
     @staticmethod
     async def invoice_generate(file):
-        invoice = Invoice(file_content=file)
-        invoice.create_invoice()
+        try:
+            invoice = Invoice(file_content=file)
+            invoice.create_invoice()
+        except Exception:
+            raise

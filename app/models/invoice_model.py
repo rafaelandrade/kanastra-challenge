@@ -2,7 +2,7 @@ import datetime
 from pydantic import BaseModel
 
 
-class Invoice(BaseModel):
+class InvoiceModel(BaseModel):
     id: str
     full_name: str
     gov_id: int
